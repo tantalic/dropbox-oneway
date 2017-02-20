@@ -1,0 +1,8 @@
+package: tantalic.com/dropbox-oneway
+import:
+- package: github.com/cenkalti/backoff
+  version: ~1.0.0
+- package: github.com/pkg/errors
+  version: ~0.8.0
+- package: tantalic.com/dropbox
+  version: 0.2.0

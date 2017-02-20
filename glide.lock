@@ -1,0 +1,10 @@
+hash: 9228756f2659bcd5974383f56880332883fb54a859530efbb90f1726cd039476
+updated: 2017-02-14T22:26:49.08218334-08:00
+imports:
+- name: github.com/cenkalti/backoff
+  version: 32cd0c5b3aef12c76ed64aaf678f6c79736be7dc
+- name: github.com/pkg/errors
+  version: 645ef00459ed84a119197bfb8d8205042c6df63d
+- name: tantalic.com/dropbox
+  version: 604de1aada511fa0d9975f1fe5ffac13f3845903
+testImports: []
