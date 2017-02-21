@@ -19,7 +19,7 @@ linux-amd64:
 	docker run --env GOOS=linux --env GOARCH=amd64 --env CGO_ENABLED=0 --rm -v "${PWD}":/go/src/$(PKG) -w /go/src/$(PKG) golang:$(GOVERSION) go build -a -tags netgo -ldflags '-w' -o build/dropbox-oneway-linux_amd64
 
 linux: linux-amd64
-	docker run --env GOOS=linux --env GOARCH=amd64               --env CGO_ENABLED=0 --rm -v "${PWD}":/go/src/$(PKG) -w /go/src/$(PKG) golang:$(GOVERSION) go build -a -tags netgo -ldflags '-w' -o build/dropbox-oneway-linux_386
+	docker run --env GOOS=linux --env GOARCH=386                 --env CGO_ENABLED=0 --rm -v "${PWD}":/go/src/$(PKG) -w /go/src/$(PKG) golang:$(GOVERSION) go build -a -tags netgo -ldflags '-w' -o build/dropbox-oneway-linux_386
 	docker run --env GOOS=linux --env GOARCH=arm   --env GOARM=6 --env CGO_ENABLED=0 --rm -v "${PWD}":/go/src/$(PKG) -w /go/src/$(PKG) golang:$(GOVERSION) go build -a -tags netgo -ldflags '-w' -o build/dropbox-oneway-linux_armv6
 	docker run --env GOOS=linux --env GOARCH=arm   --env GOARM=7 --env CGO_ENABLED=0 --rm -v "${PWD}":/go/src/$(PKG) -w /go/src/$(PKG) golang:$(GOVERSION) go build -a -tags netgo -ldflags '-w' -o build/dropbox-oneway-linux_armv7
 	docker run --env GOOS=linux --env GOARCH=arm64               --env CGO_ENABLED=0 --rm -v "${PWD}":/go/src/$(PKG) -w /go/src/$(PKG) golang:$(GOVERSION) go build -a -tags netgo -ldflags '-w' -o build/dropbox-oneway-linux_arm64

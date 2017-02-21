@@ -9,7 +9,7 @@ One-way sync of content from Dropbox: download content from Dropbox to a local f
 Docker is the preferred way to use `dropbox-oneway`. The [`tantalic/dropbox-oneway`][dockerhub] image can be pulled from Docker Hub as follows:
 
 ```shell
-docker pull tantalic/dropbox-oneway:v0.1.0
+docker pull tantalic/dropbox-oneway:v0.1.1
 ```
 
 ### macOS 
@@ -62,7 +62,7 @@ docker run \
     --volume /Users/me/Pictures/Dropbox/output:/dropbox \
     --env DROPBOX_DIRECTORY=/Photos \
     --env DROPBOX_TOKEN=xxxxxxxxxxxxxxxxxxxxxx_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
-    tantalic/dropbox-oneway:0.1.0
+    tantalic/dropbox-oneway:0.1.1
 ```
 
 ### Kubernetes
@@ -93,7 +93,7 @@ spec:
     spec:
       containers:
         - name: dropbox
-          image: tantalic/dropbox-oneway:v0.1.0
+          image: tantalic/dropbox-oneway:v0.1.1
           env: 
           - name: DROPBOX_DIRECTORY
             value: /path/to/contents
